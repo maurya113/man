@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pSeudo selectors</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+        body{
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            font-family: 'Oswald', sans-serif;
+           
+            
+        }
+        header::before{
+            background: url('https://freerangestock.com/thumbnail/137610/lonely-man-under-night-sky--starry-sky-over-the-horizon--conte.jpg') no-repeat center center/cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            z-index: -1;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+        }
+        .navigation{
+            display: flex;
+        }
+        li{
+            list-style: none;
+            padding: 20px 20px;
+            font-size: 20px;
+        }
+        section::after{
+            content: "this is developed by Manish";
+        }
+        section{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 344px;
+            justify-content: center;
+        }
+        h3{
+            font-size: 4rem;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact us</li>
+            </ul>
+        </nav>
+        
+    </header>
+    <section>
+        <h3>Welcome to coding world</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, eos debitis similique expedita velit voluptatum, inventore quaerat facilis mollitia quos ipsam repellendus asperiores facere recusandae quam molestiae omnis eius cumque!</p>
+    </section>
+    <hr>
+</body>
+</html>
